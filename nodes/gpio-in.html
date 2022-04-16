@@ -1,0 +1,47 @@
+<script type="text/javascript">
+  RED.nodes.registerType('gpio-in', {
+    category: 'libgpiod',
+    defaults: {
+      name: { value: '' },
+      state: { value: 'INPUT', required: true },
+      device: { value: 'gpiochip0', required: true },
+      pin: { value: '', required: false },
+    },
+    color: '#FCF37A',
+    icon: 'font-awesome/fa-sign-out',
+    inputs: 1,
+    outputs: 1,
+    align: 'left',
+    paletteLabel: 'GPIO in',
+    label() {
+      return this.name || `gpio in #${this.pin || '?'}`
+    },
+  })
+</script>
+
+<script type="text/x-red" data-template-name="gpio-in">
+    <div class="form-row" id="node-div-deviceRow">
+        <label for="node-input-device"><i class="fa fa-circle"></i> Device</label>
+        <input type="text" id="node-input-device" placeholder="gpiochip0">
+    </div>
+    <div class="form-row">
+        <label for="node-input-state"><i class="fa fa-wrench"></i> Type</label>
+        <select type="text" id="node-input-state" style="width: 150px;">
+            <option value="INPUT">Digital pin</option>
+        </select>
+    </div>
+    <div class="form-row"  id="node-div-pinRow">
+        <label for="node-input-pin"><i class="fa fa-circle"></i> Pin</label>
+        <input type="number" id="node-input-pin" placeholder="12">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-tips" id="node-div-formTipRow"><b>Note:</b> You can't use the same pin for both output and input.</div>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="gpio-in">
+  <p>gpio input node. A node for receiving data from General Purpose Input and Outputs (GPIOs) pins though libgpiod</p>
+</script>
