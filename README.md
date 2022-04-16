@@ -10,7 +10,7 @@ A set of input and output nodes for controlling General Purpose Input and Output
 
 ```
 cd ~/.node-red
-npm install node-red-contrib-libgpiod
+npm i --save https://github.com/s5z6/node-red-contrib-libgpiod
 ```
 
 ### Usage
