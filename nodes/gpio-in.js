@@ -27,9 +27,7 @@ module.exports = function (RED) {
     }
 
     node.on('close', function (removed, done) {
-      try {
-        node.line.release()
-      } catch (e) {}
+      node.line.release()
       done()
     })
 
