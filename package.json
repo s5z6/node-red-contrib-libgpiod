@@ -8,6 +8,7 @@
     "url": "https://github.com/s5z6/node-red-contrib-libgpiod.git"
   },
   "keywords": [
+    "node-red",
     "gpio",
     "libgpiod",
     "ioctl"
