@@ -19,6 +19,9 @@
   "dependencies": {
     "node-libgpiod": "^0.2.2"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
