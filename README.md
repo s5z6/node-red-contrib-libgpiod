@@ -1,5 +1,7 @@
 # node-red-contrib-libgpiod
 
+[![npm](https://img.shields.io/npm/v/node-red-contrib-libgpiod?style=plastic)](https://www.npmjs.com/package/node-red-contrib-libgpiod)
+
 A set of input and output nodes for controlling General Purpose Input and Outputs (GPIOs) though libgpiod (ioctl)
 
 ### Requirements
